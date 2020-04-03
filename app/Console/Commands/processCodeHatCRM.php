@@ -7,21 +7,21 @@ use App\Services\SystemLogService;
 use Illuminate\Console\Command;
 use Request;
 
-class processSoftCRM extends Command
+class processCodeHatCRM extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'process-softcrm';
+    protected $signature = 'process-chcrm';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Run all missing process to start using SoftCRM';
+    protected $description = 'Run all missing process to start using CodehatCRM';
 
     /**
      * Create a new command instance.
@@ -40,7 +40,7 @@ class processSoftCRM extends Command
      */
     public function handle()
     {
-        $this->info('Welcome in SoftCRM!');
+        $this->info('Welcome in CodeHatCRM!');
 
         $this->info('===============================================================');
         $this->info('[Let\'s start process all migrations:]');
@@ -55,10 +55,10 @@ class processSoftCRM extends Command
         $this->call('key:generate');
 
         $this->info('===============================================================');
-        $this->info('Everything looks perfect! Now you can start use SoftCRM!');
-        $this->info('If you have any question please contact with me by email: kamil.grzechulskii@gmail.com');
+        $this->info('Everything looks perfect! Now you can start use CodeHatCRM!');
+        $this->info('If you have any question please contact with me by email: info.chcrm@codehat.co.in');
 
         $systemLogs = new SystemLogService();
-        $systemLogs->loadInsertSystemLogs('First usage of process-softcrm command', 200, 1);
+        $systemLogs->loadInsertSystemLogs('First usage of process-chcrm command', 200, 1);
     }
 }

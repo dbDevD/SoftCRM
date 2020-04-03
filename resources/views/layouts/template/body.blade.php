@@ -8,7 +8,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="{{ URL::to('/') }}"><i class="fa fa-comments"></i> SoftCRM</a>
+            <a class="navbar-brand" href="{{ URL::to('/') }}"><i class="fa fa-comments"></i> {{ config('app.name') }}</a>
         </div>
         <ul class="nav navbar-top-links navbar-right">
             <span class="clock">

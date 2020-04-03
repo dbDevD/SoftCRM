@@ -25,7 +25,7 @@ class SettingsSeeder extends Seeder
         DB::table('settings')->insert(
             [
                 'key' => 'currency',
-                'value' => 'EUR',
+                'value' => 'INR',
                 'description' => 'set currency type'
             ]
         );
